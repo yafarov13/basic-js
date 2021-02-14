@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task3</title>
+</head>
+<body>
+<script>
+    "use strict";
+    console.log(10 + 10 + "10");
+    console.log(10 + "10" + 10);
+    console.log(10 + 10 + +"10");
+    console.log(10 / -"");
+    console.log(10 / +"2,5");
+    /*
+    1. 10+10=20 - числа складываются
+       20 + "10" - переводятся в строки, поэтому ответ "2010"
+    2. 10 + "10" - переводятся в строки, поэтому тут "1010"
+    "1010" + 10 - переводятся в строки, поэтому ответ "101010"
+    3. +"10" - унарный плюс, операнд превращен в число
+    10+10+10=30
+    4. Унарный минус возвращает число со знаком "-". До унарного минуса пустая строка была String, после Nuber. -"" будет равно -0. 4 / -0 = -бесконечность
+    5. +"2,5" - NaN, т.к. 2,5 - это строка, которая не может быть определена как число, т.к. числа пишутся через точку, пример: 2.5
+     */
+
+</script>
+</body>
+</html>
