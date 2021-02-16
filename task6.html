@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task6</title>
+</head>
+<body>
+<script>
+    "use strict";
+    let money = prompt("Введите, пожалуйста, ЧИСЛОМ количество денег, которое хотите положить в банк");
+    function textRub(money) {
+        if ((money[money.length - 1] == "1") && (money[money.length - 2] !== "1")) {
+            return "рубль";
+        } else if (((money[money.length - 1] == "2") || (money[money.length - 1] == "3") || (money[money.length - 1] == "4")) && (money[money.length - 2] !== "1")) {
+            return "рубля";
+        } else {
+            return "рублей"
+        }
+    }
+    alert(`Ваша сумма в ${money} ${textRub(money)} успешно зачислена.`)
+
+</script>
+</body>
+</html>
