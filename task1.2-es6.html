@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task1.1</title>
+</head>
+<body>
+<script>
+    "use strict";
+    class Post {
+        constructor(author, text, date) {
+            this.autor = author;
+            this.text = text;
+            this.date = date;
+        }
+        edit(newText) {
+            this.text = newText;
+        }
+    }
+
+    class AttachedPost extends Post {
+        constructor(author, text, date) {
+            super(author, text, date);
+            this.hightlighted = false;
+        }
+        makeTextHighlighted() {
+            this.hightlighted = true;
+        }
+    }
+
+    let firstPost = new Post("Ann", "hello", "Jan");
+    firstPost.edit("world");
+    let secondPost = new AttachedPost("Boris", "Lorem", "Feb");
+    secondPost.edit("Ipsum");
+    secondPost.makeTextHighlighted();
+
+    console.log(firstPost);
+    console.log(secondPost);
+
+</script>
+</body>
+</html>

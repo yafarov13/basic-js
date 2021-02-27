@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task1</title>
+</head>
+<body>
+<script>
+    "use strict";
+    let inputNumber = prompt("Введите, пожалуйста, целое число от 0 до 999");
+    if (isNaN(+inputNumber) || +inputNumber < 0 || +inputNumber > 999 || !Number.isInteger(+inputNumber) || inputNumber == null || inputNumber === "") {
+        console.log("Вы НЕ ввели целое число от 0 до 999");
+    } else {
+        if (inputNumber.length == 1) {
+            inputNumber = "00" + inputNumber;
+        }
+        if (inputNumber.length == 2) {
+            inputNumber = "0" + inputNumber;
+        }
+        let arrInputNumber = inputNumber.split("");
+        let objInputNumber = {
+            units: arrInputNumber[2],
+            tens: arrInputNumber[1],
+            hundreds: arrInputNumber[0],
+        }
+    console.log(arrInputNumber);
+    console.log(objInputNumber);
+    }
+
+
+</script>
+</body>
+</html>
